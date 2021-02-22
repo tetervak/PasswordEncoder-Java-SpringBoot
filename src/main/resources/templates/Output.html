@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Output</title>
+</head>
+<body>
+<main>
+    <h1>Output</h1>
+    <p>The Encoded Password: '<span th:text="${password}">password</span>'</p>
+    <ol>
+        <li th:each="e : ${encoded}" th:text="${e}">encoded password</li>
+    </ol>
+    <p>
+        <a href="Input.html" th:href="@{Input}">
+            Back to the Input
+        </a>
+    </p>
+</main>
+</body>
+</html>

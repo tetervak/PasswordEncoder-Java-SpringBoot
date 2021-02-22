@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Input</title>
+</head>
+<body>
+<main>
+    <h1>Input</h1>
+    <h2>Enter a password to encode</h2>
+    <p th:unless="${#strings.isEmpty(message)}" th:text="${message}">
+        Message
+    </p>
+    <form th:action="@{Encode}" action="Output.html" method="get">
+        <p>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="text">
+        </p>
+        <p>
+            <input type="submit" value="Submit">
+        </p>
+    </form>
+</main>
+</body>
+</html>
