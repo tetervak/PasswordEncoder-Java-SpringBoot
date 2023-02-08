@@ -11,7 +11,7 @@
     <p th:unless="${#strings.isEmpty(message)}" th:text="${message}">
         Message
     </p>
-    <form th:action="@{Encode}" action="Output.html" method="get">
+    <form th:action="@{encode}" action="Output.html" method="get">
         <p>
             <label for="password">Password</label>
             <input id="password" name="password" type="text">

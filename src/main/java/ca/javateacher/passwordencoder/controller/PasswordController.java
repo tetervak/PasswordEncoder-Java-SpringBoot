@@ -16,12 +16,12 @@ public class PasswordController {
         this.passwordEncoder = passwordEncoder;
     }
 
-    @GetMapping(value={"/","/Input"})
+    @GetMapping(value={"/","/input"})
     public String input(){
         return "Input";
     }
 
-    @GetMapping("/Encode")
+    @GetMapping("/encode")
     public ModelAndView encode(@RequestParam String password){
         if(password == null || password.isEmpty()){
             return new ModelAndView("Input",
